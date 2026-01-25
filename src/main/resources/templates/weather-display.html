@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница выбора локаций</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<h1>Добрый день <span th:text="${locationCount}">локаций</span></h1>
+
+<h3>ваша первая локация <span th:text="${firstLocationName}"></span> с температурой <span th:text="${firstLocationTemp}"></span></h3>
+<h3>ваша вторая локация <span th:text="${secondLocationName}"></span> с температурой <span th:text="${secondLocationTemp}"></span></h3>
+<h3>ваша третья локация <span th:text="${thirdLocationName}"></span> с температурой <span th:text="${thirdLocationTemp}"></span></h3>
+<h3>ваша четвертая локация <span th:text="${fourthLocationName}"></span> с температурой <span th:text="${fourthLocationTemp}"></span></h3>
+<h3>ваша пятая локация <span th:text="${fifthLocationName}"></span> с температурой <span th:text="${fifthLocationTemp}"></span></h3>
+</body>
+</html>

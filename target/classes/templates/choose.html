@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Сервис погоды</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        input[type="text"], input[type="password"] {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h1>Выбираем способ выбора локации</h1>
+
+<div class="choice-container">
+    <div class="choice-card">
+        <h2> По названию города</h2>
+        <p>Введите название города для получения погоды</p>
+        <a href="city-name" class="choice-button">Выбрать по городу</a>
+    </div>
+
+    <div class="choice-card">
+        <h2> По геоданным</h2>
+        <p>Введите координаты (широта и долгота)</p>
+        <a href="geo-data" class="choice-button">Выбрать по координатам</a>
+    </div>
+</div>
+
+<h3>Уже есть выбранные локации?</h3>
+<a href="weather" class="weather-link">Перейти к просмотру погоды</a>
+
+</body>
+</html>
