@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница авторизации</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Авторизация пользователя!</h1>
+<form action="/user/auth" method="post">
+
+    <label for="login">логин:</label>
+    <input type="text" id="login" name="login" required>
+
+    <label for="password">пароль:</label>
+    <input type="text" id="password" name="password" required>
+    <button type="submit">Авторизировать</button>
+</form>
+</body>
+</html>
