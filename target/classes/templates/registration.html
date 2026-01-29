@@ -4,23 +4,86 @@
     <meta charset="UTF-8">
     <title>Регистрация пользователя</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Принудительное выравнивание размеров полей */
+        #login, #password, #firstName, #lastName {
+            width: 100% !important;
+            height: 44px !important;
+            padding: 12px !important;
+            margin-bottom: 16px !important;
+            font-size: 16px !important;
+            border: 1px solid #ddd !important;
+            border-radius: 5px !important;
+            box-sizing: border-box !important;
+            font-family: Arial, sans-serif !important;
+            line-height: 20px !important;
+        }
+
+        #password {
+            font-family: "Segoe UI", Arial, sans-serif !important;
+            letter-spacing: 1px !important;
+        }
+    </style>
 </head>
 <body>
 <h1>Регистрация пользователя в системе!</h1>
-<form action="/user/registration" method="post">
+<form action="/user/registration" method="post" id="registrationForm" onsubmit="return validateForm()">
 
-    <label for="firstName">имя игрока:</label>
-    <input type="text" id="firstName" name="firstName" required>
+    <label for="firstName">Имя:</label>
+    <input type="text" id="firstName" name="firstName" class="form-field" required
+           oninput="validateField(this, 2, 50)">
+    <div class="error-message" id="firstNameError">
+        Имя должно быть от 2 до 50 символов
+    </div>
 
-    <label for="lastName">фамилия игрока:</label>
-    <input type="text" id="lastName" name="lastName" required>
+    <label for="lastName">Фамилия:</label>
+    <input type="text" id="lastName" name="lastName" class="form-field" required
+           oninput="validateField(this, 2, 50)">
+    <div class="error-message" id="lastNameError">
+        Фамилия должна быть от 2 до 50 символов
+    </div>
 
-    <label for="login">логин:</label>
-    <input type="text" id="login" name="login" required>
+    <label for="login">Логин:</label>
+    <input type="text" id="login" name="login" class="form-field" required
+           oninput="validateField(this, 3, 50)">
+    <div class="error-message" id="loginError">
+        Логин должен быть от 3 до 50 символов
+    </div>
 
-    <label for="password">пароль:</label>
-    <input type="text" id="password" name="password" required>
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" class="form-field" required
+           oninput="validateField(this, 6, 100)">
+    <div class="error-message" id="passwordError">
+        Пароль должен быть от 6 до 100 символов
+    </div>
+
     <button type="submit">Зарегистрировать</button>
 </form>
+
+<script>
+    function validateField(field, minLength, maxLength) {
+        const value = field.value.trim();
+        const errorElement = document.getElementById(field.id + 'Error');
+
+        if (value.length < minLength || value.length > maxLength) {
+            errorElement.style.display = 'block';
+            field.style.borderColor = 'red';
+            return false;
+        } else {
+            errorElement.style.display = 'none';
+            field.style.borderColor = '';
+            return true;
+        }
+    }
+
+    function validateForm() {
+        const firstNameValid = validateField(document.getElementById('firstName'), 2, 50);
+        const lastNameValid = validateField(document.getElementById('lastName'), 2, 50);
+        const loginValid = validateField(document.getElementById('login'), 3, 50);
+        const passwordValid = validateField(document.getElementById('password'), 6, 100);
+
+        return firstNameValid && lastNameValid && loginValid && passwordValid;
+    }
+</script>
 </body>
 </html>

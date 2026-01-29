@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Сервис погоды</title>
     <link rel="stylesheet" href="/styles.css">
-    <style>
-        input[type="text"], input[type="password"] {
-            font-size: 16px;
-        }
-    </style>
 </head>
 <body>
-<h1>зарегистрироваться</h1>
+<h1>Добро пожаловать в Сервис Погоды!</h1>
 
-<a href="register">Перейти к регистрации</a>
-<h1>авторизироваться</h1>
-<a href="autentificate">Перейти к авторизации</a>
+<div class="choice-container">
+    <div class="choice-card">
+        <h2>Регистрация</h2>
+        <p>Создайте новый аккаунт для доступа к сервису</p>
+        <a href="register" class="choice-button">Зарегистрироваться</a>
+    </div>
+
+    <div class="choice-card">
+        <h2>Авторизация</h2>
+        <p>Уже есть аккаунт? Войдите в систему</p>
+        <a href="autentificate" class="choice-button">Войти</a>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <h3>О сервисе:</h3>
+    <p>• Отслеживайте погоду в 5 локациях</p>
+    <p>• Добавляйте города по названию или координатам</p>
+    <p>• Получайте актуальную температуру</p>
+</div>
 
 </body>
 </html>

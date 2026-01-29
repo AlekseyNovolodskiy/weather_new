@@ -22,7 +22,7 @@ public class LocationServiceDisplay {
     public String weatherDisplay(Model model, HttpServletRequest request) {
         String username = (String) request.getAttribute("currentUser");
         if (username == null) {
-            throw new RuntimeException("Пользователь не авторизован");
+            return "reg-exception";
         }
         UserInfoEntity byLogin = userRepository.findByLogin(username);
         List<LocationEntity> byUser = locationRepository.findByUser(byLogin);

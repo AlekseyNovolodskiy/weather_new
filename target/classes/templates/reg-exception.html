@@ -4,14 +4,79 @@
     <meta charset="UTF-8">
     <title>Страница для перенаправления при ошибке</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        .error-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            background-color: #fff5f5;
+        }
+
+        .error-message {
+            color: #d32f2f;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #3a7bc8;
+        }
+
+        .button-register {
+            background-color: #34c759;
+        }
+
+        .button-register:hover {
+            background-color: #28a745;
+        }
+    </style>
 </head>
 <body>
-<h1>Ошибка регистрации или авторизации</h1>
-<h3>Вы были перенаправлены сюда из-за совпадения данных с уже зарегистрированныи пользователем при регистрации</h3>
-<h3>Или неправильного ввода данных при авторизации</h3>
-<h3>Нажмите кнопку и  попробуйте еще раз</h3>
-<form action="/" method="get">
-    <button type="submit">Перейти</button>
-</form>
+<div class="error-container">
+    <h1>Ошибка регистрации, авторизации или вы отключили cookies</h1>
+
+    <div class="error-message">
+        <h3>Возможные причины:</h3>
+        <ul>
+            <li>Пользователь с таким логином уже существует</li>
+            <li>Неверный логин или пароль</li>
+            <li>Данные не соответствуют требованиям:
+                <ul>
+                    <li>Имя и фамилия: 2-50 символов</li>
+                    <li>Логин: 3-50 символов</li>
+                    <li>Пароль: 6-100 символов</li>
+                </ul>
+            </li>
+            <li>Техническая ошибка</li>
+            <li>Включите поддержку cookies</li>
+        </ul>
+    </div>
+
+    <div class="buttons">
+        <a href="/register" class="button button-register">Вернуться к регистрации</a>
+        <a href="/autentificate" class="button">Вернуться к авторизации</a>
+        <a href="/" class="button">На главную</a>
+    </div>
+</div>
 </body>
 </html>
