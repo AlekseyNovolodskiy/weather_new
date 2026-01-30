@@ -2,17 +2,84 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Страница выбора локаций</title>
+    <title>Погода в ваших локациях</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        .weather-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .location-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .temperature {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .location-name {
+            font-size: 18px;
+            color: #34495e;
+        }
+    </style>
 </head>
 <body>
+<div class="weather-container">
+    <h1>🌤️ Погода в ваших локациях</h1>
 
-<h1>Добрый день <span th:text="${locationCount}">локаций</span></h1>
+    <div th:if="${locationCount != null && locationCount > 0}">
+        <p>У вас <span th:text="${locationCount}"></span> сохраненных локаций:</p>
 
-<h3>ваша первая локация <span th:text="${firstLocationName}"></span> с температурой <span th:text="${firstLocationTemp}"></span></h3>
-<h3>ваша вторая локация <span th:text="${secondLocationName}"></span> с температурой <span th:text="${secondLocationTemp}"></span></h3>
-<h3>ваша третья локация <span th:text="${thirdLocationName}"></span> с температурой <span th:text="${thirdLocationTemp}"></span></h3>
-<h3>ваша четвертая локация <span th:text="${fourthLocationName}"></span> с температурой <span th:text="${fourthLocationTemp}"></span></h3>
-<h3>ваша пятая локация <span th:text="${fifthLocationName}"></span> с температурой <span th:text="${fifthLocationTemp}"></span></h3>
+        <div class="location-card" th:if="${firstLocationName != null && !firstLocationName.isEmpty()}">
+            <div class="location-name">📍 <span th:text="${firstLocationName}"></span></div>
+            <div class="temperature">
+                <span th:text="${firstLocationTemp != null ? firstLocationTemp : 'Н/Д'}"></span>°C
+            </div>
+        </div>
+
+        <div class="location-card" th:if="${secondLocationName != null && !secondLocationName.isEmpty()}">
+            <div class="location-name">📍 <span th:text="${secondLocationName}"></span></div>
+            <div class="temperature">
+                <span th:text="${secondLocationTemp != null ? secondLocationTemp : 'Н/Д'}"></span>°C
+            </div>
+        </div>
+
+        <div class="location-card" th:if="${thirdLocationName != null && !thirdLocationName.isEmpty()}">
+            <div class="location-name">📍 <span th:text="${thirdLocationName}"></span></div>
+            <div class="temperature">
+                <span th:text="${thirdLocationTemp != null ? thirdLocationTemp : 'Н/Д'}"></span>°C
+            </div>
+        </div>
+
+        <div class="location-card" th:if="${fourthLocationName != null && !fourthLocationName.isEmpty()}">
+            <div class="location-name">📍 <span th:text="${fourthLocationName}"></span></div>
+            <div class="temperature">
+                <span th:text="${fourthLocationTemp != null ? fourthLocationTemp : 'Н/Д'}"></span>°C
+            </div>
+        </div>
+
+        <div class="location-card" th:if="${fifthLocationName != null && !fifthLocationName.isEmpty()}">
+            <div class="location-name">📍 <span th:text="${fifthLocationName}"></span></div>
+            <div class="temperature">
+                <span th:text="${fifthLocationTemp != null ? fifthLocationTemp : 'Н/Д'}"></span>°C
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${locationCount == 0}">
+        <p>📝 У вас еще нет сохраненных локаций.</p>
+        <p>Добавьте локации через раздел "Выбор локаций".</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <a href="/choose" class="btn btn-primary">➕ Добавить новую локацию</a>
+        <a href="/" class="btn btn-secondary" style="margin-left: 10px;">🏠 На главную</a>
+    </div>
+</div>
 </body>
 </html>

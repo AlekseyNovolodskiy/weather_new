@@ -38,7 +38,8 @@ public class RedirectFormControllers {
 
     @GetMapping("/weather")
     public String showWeatherDisplay() {
-        return "weather-display";
+        log.info("Redirecting /weather to /location/weather");
+        return "redirect:/location/weather";
     }
 
     @GetMapping("/choose")

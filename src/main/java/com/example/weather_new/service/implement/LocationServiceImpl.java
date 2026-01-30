@@ -25,7 +25,7 @@ public class LocationServiceImpl implements LocationService {
 
         String username = (String) request.getAttribute("currentUser");
         if (username == null) {
-            throw new RuntimeException("Пользователь не авторизован");
+            return "reg-exception";
         }
 
         UserInfoEntity byLogin = userRepository.findByLogin(username);

@@ -11,19 +11,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
-      <assistant-state connection-id="6bdb7497-1de4-456d-a3b2-e4d318e6ee76" assistant-type="SELECT_AI" default-profile-name="" selected-chat-id="49D73F3337124ABAAF817F7235EF4706" availability="AVAILABLE" acknowledgement="ENGAGED" selected="true">
-        <chats>
-          <chat id="49D73F3337124ABAAF817F7235EF4706" title="" session-signature="" timestamp="1769239407042">
-            <messages />
-            <context provider="" profile="" model="" action="" interactive="true" />
-          </chat>
-        </chats>
-        <tools />
+      <assistant-state connection-id="6bdb7497-1de4-456d-a3b2-e4d318e6ee76" default-profile-name="" selected-conversation-id="" assistant-type="SELECT_AI" availability="AVAILABLE" acknowledgement="ENGAGED">
+        <conversations />
       </assistant-state>
     </assistants>
-    <selection-state>
-      <model-selection />
-    </selection-state>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
@@ -93,12 +84,6 @@
           <token-type value="" />
           <token-config-file value="" />
           <token-profile value="" />
-          <adb-compartment-ocid value="" />
-          <adb-database-ocid value="" />
-          <azure-token-database-id-uri value="" />
-          <azure-token-tenant-id value="" />
-          <azure-token-client-id value="" />
-          <azure-token-client-certificate-file value="" />
           <session-user value="docker" />
         </database>
         <properties>
@@ -136,20 +121,11 @@
         </details>
         <debugger>
           <compile-dependencies value="true" />
+          <tcp-driver-tunneling value="false" />
           <tcp-host-address value="" />
           <tcp-port-from value="4000" />
           <tcp-port-to value="4999" />
-          <jdwp-tunnel-type value="NONE" />
           <debugger-type value="ASK" />
-          <reverse-ssh-tunnel>
-            <host value="" />
-            <port value="22" />
-            <bind-host value="127.0.0.1" />
-            <bind-port value="0" />
-            <auth-type value="PASSWORD" />
-            <user value="" />
-            <key-file value="" />
-          </reverse-ssh-tunnel>
         </debugger>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
           <object-filters>
@@ -188,7 +164,6 @@
             <object-type name="DBLINK" enabled="true" />
             <object-type name="CREDENTIAL" enabled="true" />
             <object-type name="AI_PROFILE" enabled="true" />
-            <object-type name="AI_MODEL" enabled="true" />
           </object-type-filter>
         </object-filters>
       </connection>
@@ -216,12 +191,6 @@
           <token-type value="" />
           <token-config-file value="" />
           <token-profile value="" />
-          <adb-compartment-ocid value="" />
-          <adb-database-ocid value="" />
-          <azure-token-database-id-uri value="" />
-          <azure-token-tenant-id value="" />
-          <azure-token-client-id value="" />
-          <azure-token-client-certificate-file value="" />
           <session-user value="" />
         </database>
         <properties>
@@ -259,20 +228,11 @@
         </details>
         <debugger>
           <compile-dependencies value="true" />
+          <tcp-driver-tunneling value="false" />
           <tcp-host-address value="" />
           <tcp-port-from value="4000" />
           <tcp-port-to value="4999" />
-          <jdwp-tunnel-type value="NONE" />
           <debugger-type value="ASK" />
-          <reverse-ssh-tunnel>
-            <host value="" />
-            <port value="22" />
-            <bind-host value="127.0.0.1" />
-            <bind-port value="0" />
-            <auth-type value="PASSWORD" />
-            <user value="" />
-            <key-file value="" />
-          </reverse-ssh-tunnel>
         </debugger>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
           <object-filters />
@@ -309,7 +269,6 @@
             <object-type name="DBLINK" enabled="true" />
             <object-type name="CREDENTIAL" enabled="true" />
             <object-type name="AI_PROFILE" enabled="true" />
-            <object-type name="AI_MODEL" enabled="true" />
           </object-type-filter>
         </object-filters>
       </connection>
@@ -337,12 +296,6 @@
           <token-type value="" />
           <token-config-file value="" />
           <token-profile value="" />
-          <adb-compartment-ocid value="" />
-          <adb-database-ocid value="" />
-          <azure-token-database-id-uri value="" />
-          <azure-token-tenant-id value="" />
-          <azure-token-client-id value="" />
-          <azure-token-client-certificate-file value="" />
           <session-user value="" />
         </database>
         <properties>
@@ -380,20 +333,11 @@
         </details>
         <debugger>
           <compile-dependencies value="true" />
+          <tcp-driver-tunneling value="false" />
           <tcp-host-address value="" />
           <tcp-port-from value="4000" />
           <tcp-port-to value="4999" />
-          <jdwp-tunnel-type value="NONE" />
           <debugger-type value="ASK" />
-          <reverse-ssh-tunnel>
-            <host value="" />
-            <port value="22" />
-            <bind-host value="127.0.0.1" />
-            <bind-port value="0" />
-            <auth-type value="PASSWORD" />
-            <user value="" />
-            <key-file value="" />
-          </reverse-ssh-tunnel>
         </debugger>
         <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
           <object-filters />
@@ -430,7 +374,6 @@
             <object-type name="DBLINK" enabled="true" />
             <object-type name="CREDENTIAL" enabled="true" />
             <object-type name="AI_PROFILE" enabled="true" />
-            <object-type name="AI_MODEL" enabled="true" />
           </object-type-filter>
         </object-filters>
       </connection>
@@ -477,7 +420,6 @@
           <object-type name="DBLINK" enabled="true" />
           <object-type name="CREDENTIAL" enabled="true" />
           <object-type name="AI_PROFILE" enabled="true" />
-          <object-type name="AI_MODEL" enabled="true" />
         </object-type-filter>
       </filters>
       <sorting>
@@ -792,11 +734,6 @@
         <debug-execution-timeout value="600" />
         <parameter-history-size value="10" />
       </method-execution>
-      <method-execution>
-        <execution-timeout value="30" />
-        <debug-execution-timeout value="600" />
-        <parameter-history-size value="10" />
-      </method-execution>
     </execution-engine-settings>
     <operation-settings>
       <transactions>
@@ -847,9 +784,6 @@
       <credential-settings>
         <credentials />
       </credential-settings>
-      <profile-settings>
-        <profiles />
-      </profile-settings>
     </assistant-settings>
     <general-settings>
       <regional-settings>
